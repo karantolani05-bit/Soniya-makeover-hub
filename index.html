@@ -1,101 +1,1188 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Soniya Makeover Hub | Beauty & Makeup Studio</title>
-<meta name="description" content="Soniya Makeover Hub — bridal, party, engagement and everyday makeup services in Kuber Nagar, Ahmedabad.">
-<style>
-:root{--rose:#eaa0a7;--rose2:#f8dfe1;--cream:#fff8f4;--ink:#191514;--gold:#c9a46a}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--ink)}
-a{text-decoration:none;color:inherit}.nav{position:fixed;z-index:10;top:0;width:100%;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(20,15,13,.9);backdrop-filter:blur(10px);color:#fff}
-.logo{font-size:24px;letter-spacing:3px}.logo small{display:block;font-size:9px;letter-spacing:4px;text-align:center;color:#e8c993}
-.navlinks{display:flex;gap:24px;font:14px Arial,sans-serif}.navlinks a:hover{color:#f2b6bd}
-.btn{display:inline-block;background:var(--rose);color:#fff;padding:13px 22px;border-radius:30px;font:600 14px Arial,sans-serif}
-.hero{min-height:100vh;padding:125px 6% 70px;display:flex;align-items:center;position:relative;overflow:hidden;background:#17120f}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,7,5,.92) 0%,rgba(10,7,5,.65) 42%,rgba(10,7,5,.15) 75%);pointer-events:none}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}.hero-content{position:relative;z-index:2;max-width:620px;color:#fff}.script{font-size:42px;font-style:italic;color:#f2cfc2}.hero h1{font-size:clamp(48px,8vw,92px);line-height:.9;margin:10px 0;letter-spacing:4px}.hero h2{font-weight:normal;letter-spacing:5px;margin:0 0 25px}.hero p{font:16px Arial,sans-serif;line-height:1.7}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-.section{padding:85px 7%}.section.dark{background:#171311;color:#fff}.title{text-align:center;margin-bottom:45px}.title span{font-style:italic;font-size:36px;color:#c99a85}.title h2{font-size:38px;letter-spacing:3px;margin:5px 0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:#fff;padding:28px;border:1px solid #edd9d2;border-radius:12px;box-shadow:0 8px 30px #4c251008}.card h3{margin-top:0}.price{color:#c77f88;font:700 18px Arial,sans-serif}.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about img{width:100%;border-radius:18px}.about p{font:16px Arial,sans-serif;line-height:1.8;color:#544947}.features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}.feature{padding:14px;border-radius:10px;background:#f8e7e6;font:14px Arial,sans-serif}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery img{width:100%;height:230px;object-fit:cover;border-radius:8px}.offer{background:#f7d8d9;padding:35px;border-radius:18px;text-align:center}.contact{display:grid;grid-template-columns:1fr 1fr;gap:35px}.form input,.form textarea{width:100%;padding:14px;margin:7px 0;border:1px solid #e3ceca;border-radius:8px;font:14px Arial}.footer{background:#12100f;color:#eee;text-align:center;padding:30px;font:13px Arial}.wa{position:fixed;right:20px;bottom:20px;z-index:20;background:#25d366;color:#fff;border-radius:50px;padding:15px 20px;font:700 14px Arial;box-shadow:0 8px 25px #0004}
-@media(max-width:800px){.navlinks{display:none}.hero{min-height:90vh}.grid{grid-template-columns:1fr 1fr}.about,.contact{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery img{height:180px}.section{padding:60px 5%}.hero h1{font-size:52px}.script{font-size:30px}}
-@media(max-width:480px){.grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.hero h1{font-size:44px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Soniya Makeover Hub | Beauty & Makeup Studio</title>
+  <meta name="description" content="Soniya Makeover Hub - Professional makeup, bridal makeup, hair styling and beauty services in Kuber Nagar, Ahmedabad.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fbf7f2;
+      --white: #ffffff;
+      --dark: #241b1b;
+      --muted: #756868;
+      --gold: #b58a55;
+      --gold-light: #d8b77e;
+      --wine: #6f2637;
+      --soft: #f2e7df;
+      --border: rgba(111, 38, 55, 0.12);
+      --shadow: 0 20px 60px rgba(55, 31, 31, 0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(251, 247, 242, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--wine);
+    }
+
+    .logo span {
+      display: block;
+      font-family: "DM Sans", sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: -4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--wine);
+    }
+
+    .nav-btn {
+      padding: 11px 19px;
+      background: var(--wine);
+      color: white !important;
+      border-radius: 30px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 760px;
+      padding: 140px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(216, 183, 126, 0.14);
+      border-radius: 50%;
+      top: 100px;
+      right: -180px;
+      filter: blur(5px);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(52px, 7vw, 86px);
+      line-height: 0.98;
+      font-weight: 600;
+      color: var(--wine);
+      margin-bottom: 25px;
+    }
+
+    h1 em {
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    .hero-text {
+      max-width: 530px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-bottom: 38px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 23px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--wine);
+      color: white;
+      box-shadow: 0 10px 25px rgba(111, 38, 55, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(111, 38, 55, 0.25);
+      color: var(--wine);
+      background: white;
+    }
+
+    .btn-outline:hover {
+      background: var(--soft);
+    }
+
+    .quick-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .quick-item strong {
+      display: block;
+      font-size: 18px;
+      color: var(--wine);
+    }
+
+    .quick-item span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image::before {
+      content: "";
+      position: absolute;
+      inset: 25px -20px -25px 20px;
+      border: 1px solid var(--gold-light);
+      border-radius: 180px 180px 25px 25px;
+      z-index: -1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 180px 180px 25px 25px;
+      box-shadow: var(--shadow);
+    }
+
+    .floating-card {
+      position: absolute;
+      left: -35px;
+      bottom: 35px;
+      background: white;
+      padding: 17px 20px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+    }
+
+    .floating-card small {
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 9px;
+    }
+
+    .floating-card strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      color: var(--wine);
+      font-size: 19px;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 50px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 55px);
+      color: var(--wine);
+      line-height: 1.05;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: white;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 32px 23px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--cream);
+      transition: 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-number {
+      font-family: "Playfair Display", serif;
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .service-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      color: var(--wine);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: var(--soft);
+      border-radius: 30px;
+      padding: 55px 45px;
+      position: relative;
+    }
+
+    .about-box::after {
+      content: "SMH";
+      position: absolute;
+      right: 25px;
+      bottom: 10px;
+      font-family: "Playfair Display", serif;
+      font-size: 75px;
+      color: rgba(111, 38, 55, 0.06);
+    }
+
+    .about-box h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--wine);
+      font-size: 35px;
+    }
+
+    .about-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 50px;
+      line-height: 1.05;
+      color: var(--wine);
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .checks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
+      margin-top: 25px;
+    }
+
+    .check {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .check::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: 800;
+      margin-right: 8px;
+    }
+
+    /* PACKAGES */
+
+    .packages {
+      background: var(--wine);
+      color: white;
+    }
+
+    .packages .section-heading h2 {
+      color: white;
+    }
+
+    .packages .section-heading p {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .package {
+      background: white;
+      color: var(--dark);
+      padding: 35px;
+      border-radius: 25px;
+    }
+
+    .package.featured {
+      transform: translateY(-12px);
+      border: 2px solid var(--gold-light);
+    }
+
+    .package-tag {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .package h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      color: var(--wine);
+      margin: 12px 0;
+    }
+
+    .package p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    .package ul {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .package li {
+      padding: 7px 0;
+      font-size: 13px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .package li::before {
+      content: "✦";
+      color: var(--gold);
+      margin-right: 8px;
+    }
+
+    /* GALLERY */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 0.7fr;
+      grid-template-rows: 250px 250px;
+      gap: 15px;
+    }
+
+    .gallery div {
+      overflow: hidden;
+      border-radius: 18px;
+      background: var(--soft);
+    }
+
+    .gallery div:first-child {
+      grid-row: 1 / 3;
+    }
+
+    .gallery div img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s ease;
+    }
+
+    .gallery div:hover img {
+      transform: scale(1.05);
+    }
+
+    /* INSTAGRAM */
+
+    .instagram {
+      text-align: center;
+      background: white;
+    }
+
+    .insta-handle {
+      display: inline-block;
+      margin-top: 10px;
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      color: var(--wine);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--soft);
+    }
+
+    .contact-box {
+      background: white;
+      border-radius: 30px;
+      padding: 55px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--wine);
+      font-size: 48px;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 17px;
+    }
+
+    .contact-item {
+      padding: 17px;
+      border-radius: 15px;
+      background: var(--cream);
+    }
+
+    .contact-item small {
+      color: var(--gold);
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--wine);
+      font-size: 15px;
+      margin-top: 3px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #241b1b;
+      color: white;
+      padding: 45px 0 25px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-family: "Playfair Display", serif;
+      font-size: 27px;
+    }
+
+    .footer-logo span {
+      display: block;
+      color: var(--gold-light);
+      font-family: "DM Sans", sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+    }
+
+    .footer-social {
+      color: var(--gold-light);
+    }
+
+    .copyright {
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 11px;
+      margin-top: 35px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* WHATSAPP FLOAT */
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      background: #25D366;
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        max-width: 600px;
+        margin: 30px auto 0;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .package-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .package.featured {
+        transform: none;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 220px;
+      }
+
+      .gallery div:first-child {
+        grid-row: auto;
+        grid-column: 1 / 3;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav-inner {
+        height: 68px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 110px 0 60px;
+      }
+
+      h1 {
+        font-size: 53px;
+      }
+
+      .hero-text {
+        font-size: 15px;
+      }
+
+      .hero-image img {
+        height: 470px;
+      }
+
+      .floating-card {
+        left: 10px;
+        bottom: 20px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-box {
+        padding: 40px 30px;
+      }
+
+      .about-content h2,
+      .contact-box h2 {
+        font-size: 40px;
+      }
+
+      .checks {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        padding: 30px 22px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 230px);
+      }
+
+      .gallery div:first-child {
+        grid-column: auto;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<nav class="nav">
-  <div class="logo">SMH <small>SONIYA MAKEOVER HUB</small></div>
-  <div class="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#packages">Packages</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
-  <a class="btn" href="https://wa.me/918141027711?text=Hello%20Soniya%20Makeover%20Hub,%20I%20want%20to%20book%20an%20appointment.">Book Appointment</a>
-</nav>
 
-<section id="home" class="hero">
-  <img class="hero-img" src="hero-visual.png" alt="Soniya Makeover Hub beauty studio">
-  <div class="hero-content">
-    <div class="script">Welcome to</div>
-    <h1>SONIYA</h1><h2>MAKEOVER HUB</h2>
-    <p>Enhance your natural beauty with professional makeup, styling and personalised beauty care.</p>
-    <p>Bridal &nbsp;|&nbsp; Party &nbsp;|&nbsp; Engagement &nbsp;|&nbsp; Everyday Glam</p>
-    <div class="actions"><a class="btn" href="https://wa.me/918141027711">Book Appointment</a><a class="btn" style="background:transparent;border:1px solid #fff" href="https://www.instagram.com/soni_makeover_02/">@soni_makeover_02</a></div>
-  </div>
-</section>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        Soniya Makeover Hub
+        <span>Beauty • Makeup • Hair</span>
+      </a>
 
-<section id="services" class="section">
-  <div class="title"><span>Our Expertise</span><h2>BEAUTY SERVICES</h2></div>
-  <div class="grid">
-    <div class="card"><h3>Bridal Makeup</h3><p>Elegant, camera-ready bridal looks tailored to your style.</p></div>
-    <div class="card"><h3>Party Makeup</h3><p>Glamorous looks for celebrations, functions and events.</p></div>
-    <div class="card"><h3>Engagement Makeup</h3><p>Soft, polished and photo-ready engagement styling.</p></div>
-    <div class="card"><h3>Hair & Beauty</h3><p>Hair styling, skincare, facial, cleanup, nails and mehendi.</p></div>
-  </div>
-</section>
-
-<section id="about" class="section" style="background:#fff">
-  <div class="about">
-    <img src="hero-visual.png" alt="Soniya Makeover Hub">
-    <div><div class="script">About</div><h2>SONIYA MAKEOVER HUB</h2>
-      <p>We believe every woman deserves to feel confident and beautiful. Our approach combines personalised makeup, modern styling and careful beauty services to create a look that feels like you.</p>
-      <div class="features"><div class="feature">✓ Professional Makeup</div><div class="feature">✓ Premium Products</div><div class="feature">✓ Hygienic Services</div><div class="feature">✓ Personalised Looks</div></div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.instagram.com/soni_glamstudio/" target="_blank" class="nav-btn">Instagram</a>
+      </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section id="gallery" class="section dark">
-  <div class="title"><span style="color:#e5bd9f">Our Work</span><h2>REAL PEOPLE • REAL MAKEOVERS</h2></div>
-  <div class="gallery">
-    <img src="hero-visual.png" alt="Makeover portfolio">
-    <img src="hero-visual.png" alt="Makeup portfolio">
-    <img src="hero-visual.png" alt="Beauty portfolio">
-    <img src="hero-visual.png" alt="Bridal portfolio">
-  </div>
-</section>
 
-<section id="packages" class="section">
-  <div class="title"><span>Look Beautiful • Feel Confident</span><h2>PACKAGES & OFFERS</h2></div>
-  <div class="grid">
-    <div class="card"><h3>Bridal Package</h3><p>HD Makeup • Hair Styling • Draping Guidance</p><div class="price">₹11,999 onwards</div></div>
-    <div class="card"><h3>Party Makeup</h3><p>Flawless Makeup • Hair Styling • Touch Up Kit</p><div class="price">₹2,499 onwards</div></div>
-    <div class="card"><h3>Engagement Makeup</h3><p>Soft & Elegant Look • Hair Styling • Draping</p><div class="price">₹3,499 onwards</div></div>
-    <div class="offer"><h2>Special Offer</h2><p>Book Your Makeup & Get <strong>10% OFF</strong></p><a class="btn" href="https://wa.me/918141027711">Book Now</a></div>
-  </div>
-</section>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
 
-<section class="section dark">
-  <div class="title"><span style="color:#e5bd9f">Follow Our Work</span><h2>INSTAGRAM</h2></div>
-  <p style="text-align:center;font:16px Arial">Daily updates • New looks • Behind the scenes</p>
-  <div style="text-align:center;margin-top:25px"><a class="btn" href="https://www.instagram.com/soni_makeover_02/">Follow @soni_makeover_02</a></div>
-</section>
+      <div>
+        <div class="eyebrow">Welcome to your beauty destination</div>
 
-<section id="contact" class="section">
-  <div class="title"><span>Let's Create Your Look</span><h2>GET IN TOUCH</h2></div>
-  <div class="contact">
-    <div><h3>Book Your Appointment</h3><p>📞 <strong>+91 81410 27711</strong></p><p>📸 @soni_makeover_02</p><p>📍 H-104 Maruti Shrushti Flats,<br>G Ward, Kuber Nagar, 382340</p><a class="btn" href="https://wa.me/918141027711">WhatsApp Us</a></div>
-    <form class="form" action="https://wa.me/918141027711" method="get">
-      <input name="text" placeholder="Hello, I want to book an appointment..." required>
-      <button class="btn" type="submit" style="border:0;cursor:pointer">Send Enquiry</button>
-    </form>
-  </div>
-</section>
+        <h1>
+          Beauty that feels
+          <em>uniquely you.</em>
+        </h1>
 
-<footer class="footer">SMH • SONIYA MAKEOVER HUB &nbsp; | &nbsp; Your Beauty • Our Passion ♡<br><br>© 2026 Soniya Makeover Hub. All rights reserved.</footer>
-<a class="wa" href="https://wa.me/918141027711">WhatsApp</a>
+        <p class="hero-text">
+          Discover elegant makeup, beautiful hair styling and personalised
+          beauty services designed to make every special moment unforgettable.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary"
+             href="https://wa.me/918141027711?text=Hi%20Soniya%20Makeover%20Hub,%20I%20would%20like%20to%20book%20an%20appointment."
+             target="_blank">
+            Book on WhatsApp
+          </a>
+
+          <a class="btn btn-outline" href="#services">
+            Explore Services
+          </a>
+        </div>
+
+        <div class="quick-info">
+          <div class="quick-item">
+            <strong>Makeup</strong>
+            <span>For every occasion</span>
+          </div>
+
+          <div class="quick-item">
+            <strong>Hair</strong>
+            <span>Style & finishing</span>
+          </div>
+
+          <div class="quick-item">
+            <strong>Beauty</strong>
+            <span>Personalised care</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="hero-visual%202.png" alt="Soniya Makeover Hub beauty studio">
+
+        <div class="floating-card">
+          <small>Follow our work</small>
+          <strong>@soni_glamstudio</strong>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Our services</div>
+        <h2>Made for your most beautiful moments.</h2>
+        <p>
+          From everyday glam to your most important celebrations,
+          choose a look that makes you feel confident and beautiful.
+        </p>
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <h3>Bridal Makeup</h3>
+          <p>
+            Elegant bridal looks created around your features,
+            outfit and special day.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <h3>Party Makeup</h3>
+          <p>
+            Glamorous and polished looks for parties,
+            functions and celebrations.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <h3>Hair Styling</h3>
+          <p>
+            Stylish hair looks and finishing touches
+            to complete your overall appearance.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">04</div>
+          <h3>Self Makeup</h3>
+          <p>
+            Learn practical makeup techniques and create
+            beautiful looks with confidence.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about-grid">
+
+      <div class="about-box">
+        <div class="eyebrow">The experience</div>
+        <h3>
+          Your look.<br>
+          Your style.<br>
+          Your moment.
+        </h3>
+      </div>
+
+      <div class="about-content">
+        <div class="eyebrow">About Soniya Makeover Hub</div>
+
+        <h2>
+          A beauty experience created with care.
+        </h2>
+
+        <p>
+          At Soniya Makeover Hub, every look is created with attention
+          to detail and a focus on making you feel comfortable,
+          confident and beautiful.
+        </p>
+
+        <p>
+          Whether it is your wedding day, a celebration or simply
+          a day when you want to feel your best, we are here to
+          create a look that feels like you.
+        </p>
+
+        <div class="checks">
+          <div class="check">Personalised looks</div>
+          <div class="check">Elegant finishing</div>
+          <div class="check">Professional service</div>
+          <div class="check">Special occasion ready</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PACKAGES -->
+  <section class="packages">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Beauty packages</div>
+        <h2>Choose your perfect look.</h2>
+        <p>
+          Select a service or contact us for a personalised package
+          according to your occasion.
+        </p>
+      </div>
+
+      <div class="package-grid">
+
+        <div class="package">
+          <div class="package-tag">Everyday</div>
+          <h3>Classic Glam</h3>
+          <p>Perfect for parties, events and special outings.</p>
+
+          <ul>
+            <li>Makeup look</li>
+            <li>Basic hair styling</li>
+            <li>Finishing touches</li>
+          </ul>
+
+          <a class="btn btn-outline"
+             href="https://wa.me/918141027711?text=Hi,%20I%20want%20to%20know%20about%20the%20Classic%20Glam%20package."
+             target="_blank">
+            Enquire Now
+          </a>
+        </div>
+
+
+        <div class="package featured">
+          <div class="package-tag">Special occasion</div>
+          <h3>Signature Look</h3>
+          <p>A complete polished look for your important celebration.</p>
+
+          <ul>
+            <li>Professional makeup</li>
+            <li>Hair styling</li>
+            <li>Look consultation</li>
+            <li>Final finishing</li>
+          </ul>
+
+          <a class="btn btn-primary"
+             href="https://wa.me/918141027711?text=Hi,%20I%20want%20to%20know%20about%20the%20Signature%20Look%20package."
+             target="_blank">
+            Book Now
+          </a>
+        </div>
+
+
+        <div class="package">
+          <div class="package-tag">Bridal</div>
+          <h3>Bridal Beauty</h3>
+          <p>A personalised bridal experience for your big day.</p>
+
+          <ul>
+            <li>Bridal makeup</li>
+            <li>Bridal hair styling</li>
+            <li>Personalised consultation</li>
+            <li>Occasion finishing</li>
+          </ul>
+
+          <a class="btn btn-outline"
+             href="https://wa.me/918141027711?text=Hi,%20I%20want%20to%20know%20about%20Bridal%20Beauty%20services."
+             target="_blank">
+            Enquire Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Our gallery</div>
+        <h2>A glimpse of our beauty world.</h2>
+        <p>
+          Follow us on Instagram to see our latest makeup looks,
+          transformations and updates.
+        </p>
+      </div>
+
+      <div class="gallery">
+
+        <div>
+          <img src="hero-visual%202.png" alt="Beauty makeup look">
+        </div>
+
+        <div>
+          <img src="hero-visual%202.png" alt="Makeover">
+        </div>
+
+        <div>
+          <img src="hero-visual%202.png" alt="Makeup styling">
+        </div>
+
+        <div>
+          <img src="hero-visual%202.png" alt="Beauty studio">
+        </div>
+
+        <div>
+          <img src="hero-visual%202.png" alt="Makeup details">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- INSTAGRAM -->
+  <section class="instagram">
+    <div class="container">
+
+      <div class="eyebrow">Follow our journey</div>
+
+      <div class="section-heading">
+        <h2>See more looks on Instagram.</h2>
+        <p>
+          Follow our latest makeup looks, beauty work and updates.
+        </p>
+      </div>
+
+      <a class="insta-handle"
+         href="https://www.instagram.com/soni_glamstudio/"
+         target="_blank">
+        @soni_glamstudio
+      </a>
+
+      <div style="margin-top:28px;">
+        <a class="btn btn-primary"
+           href="https://www.instagram.com/soni_glamstudio/"
+           target="_blank">
+          Open Instagram
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="contact-box">
+
+        <div>
+          <div class="eyebrow">Let's create your look</div>
+
+          <h2>
+            Ready to feel beautiful?
+          </h2>
+
+          <p>
+            Contact Soniya Makeover Hub for appointments,
+            service details and personalised beauty packages.
+          </p>
+
+          <div style="margin-top:25px;">
+            <a class="btn btn-primary"
+               href="https://wa.me/918141027711?text=Hi%20Soniya%20Makeover%20Hub,%20I%20would%20like%20to%20book%20an%20appointment."
+               target="_blank">
+              WhatsApp Us
+            </a>
+          </div>
+        </div>
+
+
+        <div class="contact-details">
+
+          <a class="contact-item" href="tel:+918141027711">
+            <small>Call / WhatsApp</small>
+            <strong>+91 81410 27711</strong>
+          </a>
+
+          <a class="contact-item"
+             href="https://www.instagram.com/soni_glamstudio/"
+             target="_blank">
+            <small>Instagram</small>
+            <strong>@soni_glamstudio</strong>
+          </a>
+
+          <div class="contact-item">
+            <small>Visit us</small>
+            <strong>
+              H-104 Maruti Shrushti Flats,<br>
+              G Ward, Kuber Nagar
+            </strong>
+          </div>
+
+          <div class="contact-item">
+            <small>City</small>
+            <strong>Ahmedabad, Gujarat</strong>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div class="footer-logo">
+          Soniya Makeover Hub
+          <span>BEAUTY • MAKEUP • HAIR</span>
+        </div>
+
+        <a class="footer-social"
+           href="https://www.instagram.com/soni_glamstudio/"
+           target="_blank">
+          Instagram @soni_glamstudio
+        </a>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 Soniya Makeover Hub. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- WHATSAPP BUTTON -->
+  <a class="whatsapp"
+     href="https://wa.me/918141027711?text=Hi%20Soniya%20Makeover%20Hub,%20I%20would%20like%20to%20book%20an%20appointment."
+     target="_blank"
+     aria-label="Chat on WhatsApp">
+    ☎
+  </a>
+
 </body>
 </html>
