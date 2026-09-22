@@ -57,7 +57,7 @@
       margin: auto;
     }
 
-    /* NAVBAR */
+    /* NAVIGATION */
 
     nav {
       position: fixed;
@@ -65,7 +65,7 @@
       left: 0;
       right: 0;
       z-index: 1000;
-      background: rgba(251, 247, 242, 0.92);
+      background: rgba(251, 247, 242, 0.94);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
@@ -97,7 +97,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 28px;
       font-size: 14px;
       font-weight: 600;
     }
@@ -131,7 +131,6 @@
       border-radius: 50%;
       top: 100px;
       right: -180px;
-      filter: blur(5px);
     }
 
     .hero-grid {
@@ -358,16 +357,6 @@
       position: relative;
     }
 
-    .about-box::after {
-      content: "SMH";
-      position: absolute;
-      right: 25px;
-      bottom: 10px;
-      font-family: "Playfair Display", serif;
-      font-size: 75px;
-      color: rgba(111, 38, 55, 0.06);
-    }
-
     .about-box h3 {
       font-family: "Playfair Display", serif;
       color: var(--wine);
@@ -496,7 +485,7 @@
       grid-row: 1 / 3;
     }
 
-    .gallery div img {
+    .gallery img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -618,7 +607,7 @@
       border-top: 1px solid rgba(255,255,255,0.1);
     }
 
-    /* WHATSAPP FLOAT */
+    /* WHATSAPP */
 
     .whatsapp {
       position: fixed;
@@ -637,9 +626,10 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
 
-    /* RESPONSIVE */
+    /* MOBILE */
 
     @media (max-width: 850px) {
+
       .nav-links {
         display: none;
       }
@@ -683,6 +673,7 @@
     }
 
     @media (max-width: 520px) {
+
       .nav-inner {
         height: 68px;
       }
@@ -739,9 +730,8 @@
       }
 
       .gallery {
-        display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 230px);
+        grid-template-rows: repeat(5, 230px);
       }
 
       .gallery div:first-child {
@@ -758,9 +748,9 @@
 
 <body>
 
-  <!-- NAVIGATION -->
   <nav>
     <div class="container nav-inner">
+
       <a href="#" class="logo">
         Soniya Makeover Hub
         <span>Beauty • Makeup • Hair</span>
@@ -771,18 +761,27 @@
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
-        <a href="https://www.instagram.com/soni_glamstudio/" target="_blank" class="nav-btn">Instagram</a>
+
+        <a href="https://www.instagram.com/soni_glamstudio/"
+           target="_blank"
+           class="nav-btn">
+          Instagram
+        </a>
       </div>
+
     </div>
   </nav>
 
 
-  <!-- HERO -->
   <header class="hero">
+
     <div class="container hero-grid">
 
       <div>
-        <div class="eyebrow">Welcome to your beauty destination</div>
+
+        <div class="eyebrow">
+          Welcome to your beauty destination
+        </div>
 
         <h1>
           Beauty that feels
@@ -790,11 +789,13 @@
         </h1>
 
         <p class="hero-text">
-          Discover elegant makeup, beautiful hair styling and personalised
-          beauty services designed to make every special moment unforgettable.
+          Discover elegant makeup, beautiful hair styling and
+          personalised beauty services designed to make every
+          special moment unforgettable.
         </p>
 
         <div class="buttons">
+
           <a class="btn btn-primary"
              href="https://wa.me/918141027711?text=Hi%20Soniya%20Makeover%20Hub,%20I%20would%20like%20to%20book%20an%20appointment."
              target="_blank">
@@ -804,9 +805,11 @@
           <a class="btn btn-outline" href="#services">
             Explore Services
           </a>
+
         </div>
 
         <div class="quick-info">
+
           <div class="quick-item">
             <strong>Makeup</strong>
             <span>For every occasion</span>
@@ -821,34 +824,48 @@
             <strong>Beauty</strong>
             <span>Personalised care</span>
           </div>
+
         </div>
+
       </div>
 
+
       <div class="hero-image">
-        <img src="hero-visual%202.png" alt="Soniya Makeover Hub beauty studio">
+
+        <img src="hero-visual 2.png"
+             alt="Soniya Makeover Hub">
 
         <div class="floating-card">
           <small>Follow our work</small>
           <strong>@soni_glamstudio</strong>
         </div>
+
       </div>
 
     </div>
+
   </header>
 
 
-  <!-- SERVICES -->
   <section class="services" id="services">
+
     <div class="container">
 
       <div class="section-heading">
+
         <div class="eyebrow">Our services</div>
-        <h2>Made for your most beautiful moments.</h2>
+
+        <h2>
+          Made for your most beautiful moments.
+        </h2>
+
         <p>
           From everyday glam to your most important celebrations,
           choose a look that makes you feel confident and beautiful.
         </p>
+
       </div>
+
 
       <div class="service-grid">
 
@@ -889,34 +906,43 @@
         </div>
 
       </div>
+
     </div>
+
   </section>
 
 
-  <!-- ABOUT -->
   <section id="about">
+
     <div class="container about-grid">
 
       <div class="about-box">
+
         <div class="eyebrow">The experience</div>
+
         <h3>
           Your look.<br>
           Your style.<br>
           Your moment.
         </h3>
+
       </div>
 
+
       <div class="about-content">
-        <div class="eyebrow">About Soniya Makeover Hub</div>
+
+        <div class="eyebrow">
+          About Soniya Makeover Hub
+        </div>
 
         <h2>
           A beauty experience created with care.
         </h2>
 
         <p>
-          At Soniya Makeover Hub, every look is created with attention
-          to detail and a focus on making you feel comfortable,
-          confident and beautiful.
+          At Soniya Makeover Hub, every look is created with
+          attention to detail and a focus on making you feel
+          comfortable, confident and beautiful.
         </p>
 
         <p>
@@ -926,36 +952,54 @@
         </p>
 
         <div class="checks">
+
           <div class="check">Personalised looks</div>
           <div class="check">Elegant finishing</div>
           <div class="check">Professional service</div>
           <div class="check">Special occasion ready</div>
+
         </div>
+
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- PACKAGES -->
   <section class="packages">
+
     <div class="container">
 
       <div class="section-heading">
+
         <div class="eyebrow">Beauty packages</div>
-        <h2>Choose your perfect look.</h2>
+
+        <h2>
+          Choose your perfect look.
+        </h2>
+
         <p>
-          Select a service or contact us for a personalised package
-          according to your occasion.
+          Select a service or contact us for a personalised
+          package according to your occasion.
         </p>
+
       </div>
+
 
       <div class="package-grid">
 
         <div class="package">
-          <div class="package-tag">Everyday</div>
+
+          <div class="package-tag">
+            Everyday
+          </div>
+
           <h3>Classic Glam</h3>
-          <p>Perfect for parties, events and special outings.</p>
+
+          <p>
+            Perfect for parties, events and special outings.
+          </p>
 
           <ul>
             <li>Makeup look</li>
@@ -968,13 +1012,21 @@
              target="_blank">
             Enquire Now
           </a>
+
         </div>
 
 
         <div class="package featured">
-          <div class="package-tag">Special occasion</div>
+
+          <div class="package-tag">
+            Special occasion
+          </div>
+
           <h3>Signature Look</h3>
-          <p>A complete polished look for your important celebration.</p>
+
+          <p>
+            A complete polished look for your important celebration.
+          </p>
 
           <ul>
             <li>Professional makeup</li>
@@ -988,13 +1040,21 @@
              target="_blank">
             Book Now
           </a>
+
         </div>
 
 
         <div class="package">
-          <div class="package-tag">Bridal</div>
+
+          <div class="package-tag">
+            Bridal
+          </div>
+
           <h3>Bridal Beauty</h3>
-          <p>A personalised bridal experience for your big day.</p>
+
+          <p>
+            A personalised bridal experience for your big day.
+          </p>
 
           <ul>
             <li>Bridal makeup</li>
@@ -1008,65 +1068,90 @@
              target="_blank">
             Enquire Now
           </a>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
 
-  <!-- GALLERY -->
   <section id="gallery">
+
     <div class="container">
 
       <div class="section-heading">
-        <div class="eyebrow">Our gallery</div>
-        <h2>A glimpse of our beauty world.</h2>
+
+        <div class="eyebrow">
+          Our gallery
+        </div>
+
+        <h2>
+          A glimpse of our beauty world.
+        </h2>
+
         <p>
           Follow us on Instagram to see our latest makeup looks,
           transformations and updates.
         </p>
+
       </div>
+
 
       <div class="gallery">
 
         <div>
-          <img src="hero-visual%202.png" alt="Beauty makeup look">
+          <img src="hero-visual 2.png"
+               alt="Beauty makeup look">
         </div>
 
         <div>
-          <img src="hero-visual%202.png" alt="Makeover">
+          <img src="hero-visual 2.png"
+               alt="Makeover">
         </div>
 
         <div>
-          <img src="hero-visual%202.png" alt="Makeup styling">
+          <img src="hero-visual 2.png"
+               alt="Makeup styling">
         </div>
 
         <div>
-          <img src="hero-visual%202.png" alt="Beauty studio">
+          <img src="hero-visual 2.png"
+               alt="Beauty studio">
         </div>
 
         <div>
-          <img src="hero-visual%202.png" alt="Makeup details">
+          <img src="hero-visual 2.png"
+               alt="Makeup details">
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- INSTAGRAM -->
   <section class="instagram">
+
     <div class="container">
 
-      <div class="eyebrow">Follow our journey</div>
+      <div class="eyebrow">
+        Follow our journey
+      </div>
 
       <div class="section-heading">
-        <h2>See more looks on Instagram.</h2>
+
+        <h2>
+          See more looks on Instagram.
+        </h2>
+
         <p>
           Follow our latest makeup looks, beauty work and updates.
         </p>
+
       </div>
 
       <a class="insta-handle"
@@ -1076,25 +1161,31 @@
       </a>
 
       <div style="margin-top:28px;">
+
         <a class="btn btn-primary"
            href="https://www.instagram.com/soni_glamstudio/"
            target="_blank">
           Open Instagram
         </a>
+
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- CONTACT -->
   <section class="contact" id="contact">
+
     <div class="container">
 
       <div class="contact-box">
 
         <div>
-          <div class="eyebrow">Let's create your look</div>
+
+          <div class="eyebrow">
+            Let's create your look
+          </div>
 
           <h2>
             Ready to feel beautiful?
@@ -1106,82 +1197,116 @@
           </p>
 
           <div style="margin-top:25px;">
+
             <a class="btn btn-primary"
                href="https://wa.me/918141027711?text=Hi%20Soniya%20Makeover%20Hub,%20I%20would%20like%20to%20book%20an%20appointment."
                target="_blank">
               WhatsApp Us
             </a>
+
           </div>
+
         </div>
 
 
         <div class="contact-details">
 
-          <a class="contact-item" href="tel:+918141027711">
+          <a class="contact-item"
+             href="tel:+918141027711">
+
             <small>Call / WhatsApp</small>
             <strong>+91 81410 27711</strong>
+
           </a>
+
 
           <a class="contact-item"
              href="https://www.instagram.com/soni_glamstudio/"
              target="_blank">
+
             <small>Instagram</small>
             <strong>@soni_glamstudio</strong>
+
           </a>
 
+
           <div class="contact-item">
+
             <small>Visit us</small>
+
             <strong>
               H-104 Maruti Shrushti Flats,<br>
               G Ward, Kuber Nagar
             </strong>
+
           </div>
 
+
           <div class="contact-item">
+
             <small>City</small>
-            <strong>Ahmedabad, Gujarat</strong>
+
+            <strong>
+              Ahmedabad, Gujarat
+            </strong>
+
           </div>
 
         </div>
 
       </div>
+
     </div>
+
   </section>
 
 
-  <!-- FOOTER -->
   <footer>
+
     <div class="container">
 
       <div class="footer-inner">
 
         <div class="footer-logo">
+
           Soniya Makeover Hub
-          <span>BEAUTY • MAKEUP • HAIR</span>
+
+          <span>
+            BEAUTY • MAKEUP • HAIR
+          </span>
+
         </div>
+
 
         <a class="footer-social"
            href="https://www.instagram.com/soni_glamstudio/"
            target="_blank">
+
           Instagram @soni_glamstudio
+
         </a>
 
       </div>
 
+
       <div class="copyright">
+
         © 2026 Soniya Makeover Hub. All rights reserved.
+
       </div>
 
     </div>
+
   </footer>
 
 
-  <!-- WHATSAPP BUTTON -->
   <a class="whatsapp"
      href="https://wa.me/918141027711?text=Hi%20Soniya%20Makeover%20Hub,%20I%20would%20like%20to%20book%20an%20appointment."
      target="_blank"
      aria-label="Chat on WhatsApp">
+
     ☎
+
   </a>
 
 </body>
